@@ -19,7 +19,7 @@ CREATE TABLE clientes (
 	fecha date NULL
 );
 
-CREATE TABLE postgres.transacciones (
+CREATE TABLE transacciones (
 	id serial4 NOT NULL,
 	ciudad_origen varchar NOT NULL,
 	valor int4 NOT NULL,
