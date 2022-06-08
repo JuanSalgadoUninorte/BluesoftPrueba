@@ -1,0 +1,30 @@
+
+
+CREATE TABLE saldo (
+	id serial4 NOT NULL,
+	id_cliente varchar NOT NULL,
+	saldo int4 NOT NULL,
+	fecha date NULL
+);
+
+
+CREATE TABLE clientes (
+	id int4 NOT NULL DEFAULT nextval('cliente_id_seq'::regclass),
+	identification varchar NOT NULL,
+	nombres varchar NOT NULL,
+	apellidos varchar NOT NULL,
+	clave varchar NOT NULL,
+	ciudad_origen varchar NOT NULL,
+	tipo_cuenta varchar NOT NULL,
+	fecha date NULL
+);
+
+CREATE TABLE postgres.transacciones (
+	id serial4 NOT NULL,
+	ciudad_origen varchar NOT NULL,
+	valor int4 NOT NULL,
+	id_cliente varchar NOT NULL,
+	fecha date NOT NULL,
+	estado varchar NULL
+);
+CREATE INDEX transacciones_id_idx ON postgres.transacciones USING btree (id);
