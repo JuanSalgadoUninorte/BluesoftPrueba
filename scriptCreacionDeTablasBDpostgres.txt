@@ -27,4 +27,4 @@ CREATE TABLE transacciones (
 	fecha date NOT NULL,
 	estado varchar NULL
 );
-CREATE INDEX transacciones_id_idx ON postgres.transacciones USING btree (id);
+CREATE INDEX transacciones_id_idx ON transacciones USING btree (id);
